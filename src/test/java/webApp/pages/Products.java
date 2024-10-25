@@ -10,6 +10,8 @@ public class Products extends BasePage {
     private final By productName = By.name("password");
     private final By productPrice = By.name("password");
     private final By addToCartButton = By.name("password");
+    private final By  messages = By.xpath("//button[@type='submit']");
+
 
     public WebElement getPageHeadline() {
         return findElement(pageHeadline);
@@ -17,8 +19,11 @@ public class Products extends BasePage {
     public WebElement getCategoryCheckList() {
         return findElement(categoryCheckList);
     }
-    public WebElement getProductName() {
-        return findElement(productName);
+    public WebElement getProductName(String name) {
+        return findElement(By.xpath(""+ name+""));
+    }
+    public WebElement getMessages() {
+        return findElement(messages);
     }
     public WebElement getProductPrice() {
         return findElement(productPrice);

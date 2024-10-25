@@ -4,7 +4,8 @@ import org.openqa.selenium.WebElement;
 import webApp.pages.*;
 
 public class Header extends BasePage {
-    private final By profileIcon = By.name("");
+    private final By profileIcon = By.cssSelector(".account-setting-active");
+    private final By headline = By.name("");
     private final By registerButton = By.name("password");
     private final By loginButton = By.xpath("//button[@type='submit']");
 
@@ -14,17 +15,25 @@ public class Header extends BasePage {
     private final By productTab = By.xpath("//button[@type='submit']");
     private final By viewCartButton = By.xpath("//button[@type='submit']");
 
+
+
     public WebElement getProfileIcon() {
         return findElement(profileIcon);
+    }
+
+    public WebElement getHeadline() {
+        return findElement(headline);
     }
 
     public WebElement getCartCount() {
         return findElement(cartCount);
     }
 
-    public By getLogoutButton() {
-        return logoutButton;
+    public WebElement getLogoutButton() {
+        return findElement(logoutButton);
     }
+
+
 
     public WebElement getCartIcon() {
         return findElement(cartIcon);

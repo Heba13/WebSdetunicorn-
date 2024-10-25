@@ -44,8 +44,8 @@ public class Register extends BasePage {
     public void clickonGenderDropDown(){
         findElement(genderDropDown).click();
     }
-    public Register clickonRegisterButton(){
+    public Products clickonRegisterButton(){
         findElement(registerButton).click();
-        return  new Register();
+        return new Products();
     }
 }
