@@ -5,24 +5,16 @@ import webApp.pages.*;
 
 public class Header extends BasePage {
     private final By profileIcon = By.cssSelector(".account-setting-active");
-    private final By headline = By.name("");
-    private final By registerButton = By.name("password");
-    private final By loginButton = By.xpath("//button[@type='submit']");
-
-    private final By logoutButton = By.xpath("//button[@type='submit']");
-    private final By cartIcon = By.xpath("//button[@type='submit']");
-    private final By cartCount = By.xpath("//button[@type='submit']");
-    private final By productTab = By.xpath("//button[@type='submit']");
-    private final By viewCartButton = By.xpath("//button[@type='submit']");
-
-
+    private final By registerButton = By.cssSelector("a[href='/register']");
+    private final By loginButton = By.cssSelector("a[href='/login']");
+    private final By logoutButton =By.xpath("//div[@class='account-dropdown active']//li[contains(text(),'Logout')]");
+    private final By cartIcon = By.cssSelector(".icon-cart");
+    private final By cartCount = By.cssSelector("span[class='count-style']");
+    private final By productTab =  By.cssSelector("a[href='/shop-grid-standard']");
+    private final By viewCartButton = By.xpath("//a[@href='/cart']");
 
     public WebElement getProfileIcon() {
         return findElement(profileIcon);
-    }
-
-    public WebElement getHeadline() {
-        return findElement(headline);
     }
 
     public WebElement getCartCount() {
@@ -32,8 +24,6 @@ public class Header extends BasePage {
     public WebElement getLogoutButton() {
         return findElement(logoutButton);
     }
-
-
 
     public WebElement getCartIcon() {
         return findElement(cartIcon);
