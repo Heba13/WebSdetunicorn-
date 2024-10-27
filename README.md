@@ -1,4 +1,4 @@
-# Automation Testing for stripe
+# Automation Testing for Sdetunicorn 
 
 This project is aimed at automating Web application testing using selenium 4 and Cucumber framework with BDD (Behavior-Driven Development) methodology.
 This README file will guide you through setting up and running the tests.
@@ -15,7 +15,7 @@ This README file will guide you through setting up and running the tests.
 
 open git bash on the project directory then run command
 ```
-git clone https://gitlab.com/vodafone11/orangehr.git
+git clone  https://github.com/Heba13/WebAutomation.git 
 ```
 Choose browser Type by setting set variable in  java class WebDriverConfig 
  in driver directory.
@@ -35,8 +35,8 @@ Run "TestNG" file in project path
 - ## Test Reporting
   Test reports are generated automatically after running "testNG" file.
   You can find the HTML report in the "reports" directory.
-  Open OrangeHR-Report.html in a web browser to view the test report.
+  Open shop.html in a web browser to view the test report.
 
 - ## Media
-- orangeHr Report - video.mp4 in path "reports" attached for tests record 
+-  Record-shop.mp4 in path "reports" attached for tests record 
 
