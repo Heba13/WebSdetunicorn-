@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="shop">
+    <test name="shop">
+        <classes>
+            <class name="webApp.utilities.extentReport.ExtentReport"/>
+            <class name="webApp.pages.BasePage"/>
+            <class name="webApp.tests.shop.ShopRunner"/>
+        </classes>
+    </test>
+</suite>
