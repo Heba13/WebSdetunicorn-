@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class Register extends BasePage {
-
     private final By pageHeadline = By.xpath("//h4[normalize-space()='Register']");
     private final By userNameTextBox = By.cssSelector("input[id='username']");
     private final By passwordBox = By.cssSelector("input[id='password']");
@@ -13,10 +12,6 @@ public class Register extends BasePage {
     private final By secondAddressTextBox =By.cssSelector("input[id='address2']");
     private final By contactTextBox = By.cssSelector("input[id='contact']");
     private final By registerButton =By.cssSelector("button[class='w-100 submit-btn my-3']");
-
-    public WebElement getPageHeadline() {
-        return findElement(pageHeadline);
-    }
 
     public WebElement getUserNameTextBox() {
         return findElement(userNameTextBox);
@@ -47,7 +42,6 @@ public class Register extends BasePage {
     public void selectGender(String gender){
         findElement(By.xpath("//*[@id='gender']/option[@value='"+gender+"']")).click();
     }
-
     public Products clickOnRegisterButton(){
         findElement(registerButton).click();
         return new Products();

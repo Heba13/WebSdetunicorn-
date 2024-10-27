@@ -3,7 +3,6 @@ package webApp.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 public class Order extends BasePage {
-    private final By pageHeadline = By.name("password");
     private final By orderButton= By.cssSelector("button[variant='link']");
     public WebElement getOrderButton() {
         waitUntilElementIsVisible();

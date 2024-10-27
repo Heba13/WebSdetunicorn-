@@ -29,10 +29,6 @@ public class Header extends BasePage {
         return findElement(cartIcon);
     }
 
-    public WebElement getLoginButton() {
-        return findElement(loginButton);
-    }
-
     public Register clickOnRegisterButton() {
         findElement(registerButton).click();
         return new Register();
