@@ -38,5 +38,5 @@ Run "TestNG" file in project path
   Open shop.html in a web browser to view the test report.
 
 - ## Media
--  Record-shop.mp4 in path "reports" attached for tests record 
+-  Record-shop.mp4 in path "reports" attached for tests record .
 
