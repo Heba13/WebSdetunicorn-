@@ -34,9 +34,9 @@ Run "TestNG" file in project path
 
 - ## Test Reporting
   Test reports are generated automatically after running "testNG" file.
-  You can find the HTML report in the "reports" directory.
+  You can find the HTML report in the "\src\report" directory.
   Open shop.html in a web browser to view the test report.
 
 - ## Media
--  Record-shop.mp4 in path "reports" attached for tests record .
-
+-  record video html link 
+**https://drive.google.com/file/d/1NS96s42TaHpuQs1KwKRqetp0wvtxDQkr/view?usp=drivesdk**
