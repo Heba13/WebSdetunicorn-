@@ -23,7 +23,7 @@ public class Cart extends  BasePage{
     public WebElement getPostalCodeTextBox() {return findElement(postalCodeTextBox);}
 
     public WebElement getCheckOutButton() {
-//        scrollPageToElement(findElement(checkOutButton));
+      scrollPageToElement(findElement(checkOutButton));
         return findElement(checkOutButton);
     }
 

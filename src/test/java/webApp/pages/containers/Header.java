@@ -11,6 +11,9 @@ public class Header extends BasePage {
     private final By cartIcon = By.cssSelector(".icon-cart");
     private final By cartCount = By.cssSelector("span[class='count-style']");
     private final By productTab =  By.cssSelector("a[href='/shop-grid-standard']");
+
+    private final By orderIcon =  By.cssSelector("a[href='/order']");
+
     private final By viewCartButton = By.xpath("//a[@href='/cart']");
 
     public WebElement getProfileIcon() {
@@ -46,4 +49,8 @@ public class Header extends BasePage {
         return new Login();
     }
 
+    public Order clickOnOrderIcon() {
+        findElement(orderIcon).click();
+        return new Order();
+    }
 }
