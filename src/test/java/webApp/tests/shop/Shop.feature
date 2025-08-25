@@ -18,7 +18,7 @@ Feature: Shop
 
     Examples:
       | userName | password  | email                  | gender | address | contact    | products | successMessage                                |
-      | Admin    | Admin1234 | digital.testing008@gmail.com | female | Giza    | 0101182335 | SHOP     | Congratulations Your account has been created |
+      | Admin    | Admin1234 | digital.testing88@gmail.com | female | Giza    | 0101182335 | SHOP     | Congratulations Your account has been created |
 
   Scenario Outline: Verify that two products are purchased successfully
     When  click on profile icon in header
