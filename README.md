@@ -15,7 +15,7 @@ This README file will guide you through setting up and running the tests.
 
 open git bash on the project directory then run command
 ```
-git clone  https://github.com/Heba13/WebAutomation.git 
+git clone  https://github.com/Heba13/WebSdetunicorn.git 
 ```
 Choose browser Type by setting set variable in  java class WebDriverConfig 
  in driver directory.
