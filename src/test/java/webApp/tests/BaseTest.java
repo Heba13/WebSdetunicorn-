@@ -13,5 +13,4 @@ public class BaseTest {
         driver = webDriverConfig.getWebDriver();
     }
 
-
 }

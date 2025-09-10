@@ -8,9 +8,7 @@ import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.PickleStepTestStep;
 import io.cucumber.plugin.event.TestCase;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
@@ -31,8 +29,8 @@ public class ExtentReport {
     }
 
     public static void startTC() {
-        String testCaseName = scenario.getName();
-        test = extentReport.createTest(testCaseName);
+        String scenarioName = scenario.getName();
+        test = extentReport.createTest(scenarioName); // scenario name
         currentStepDefIndex = 0;
         test.assignCategory(getFeatureFileName());
     }
@@ -43,7 +41,7 @@ public class ExtentReport {
 
     public static void setStepDefs() throws NoSuchFieldException, IllegalAccessException {
 
-        TestCase testCase = getTestCase();
+        TestCase testCase = getTestCase(); //step
         stepDefs = getTestStepDefs(testCase);
     }
 

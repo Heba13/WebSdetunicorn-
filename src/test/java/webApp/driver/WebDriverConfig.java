@@ -57,4 +57,5 @@ public class WebDriverConfig {
     public static void close() {
         webDriver.quit();
     }
+
 }
