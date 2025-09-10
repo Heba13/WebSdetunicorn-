@@ -4,8 +4,7 @@
         <listener class-name="webApp.utilities.listener.TestNGListener"/>
     </listeners>
 
-    <test name="shop">
-
+    <test name="Shop-Report">
         <classes>
             <class name="webApp.utilities.extentReport.ExtentReport"/>
             <class name="webApp.pages.BasePage"/>

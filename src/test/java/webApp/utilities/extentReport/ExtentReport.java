@@ -7,7 +7,9 @@ import io.cucumber.core.backend.TestCaseState;
 import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.PickleStepTestStep;
 import io.cucumber.plugin.event.TestCase;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -17,7 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ExtentReport {
-    private final static ExtentReports extentReport = new ExtentReports();
+    private static ExtentReports extentReport ;
     public static ExtentSparkReporter reporter;
     static int currentStepDefIndex;
     private static ExtentTest test;
@@ -31,7 +33,6 @@ public class ExtentReport {
     public static void startTC() {
         String testCaseName = scenario.getName();
         test = extentReport.createTest(testCaseName);
-        System.out.print(test.toString());
         currentStepDefIndex = 0;
         test.assignCategory(getFeatureFileName());
     }
@@ -72,7 +73,26 @@ public class ExtentReport {
         return testCase;
     }
 
-    @AfterTest
+
+    @BeforeSuite
+    public void startReport(org.testng.ITestContext context) throws IOException {
+        String reportName = context.getName();
+        System.out.println(reportName);
+        initializeReportConfiguration(reportName);
+    }
+
+    public void initializeReportConfiguration(String reportName) throws IOException {
+        reporter = new ExtentSparkReporter("./reports/" + reportName+".html");
+        extentReport = new ExtentReports();
+        extentReport.setSystemInfo("Report Name",reportName);
+        extentReport.setSystemInfo("User Name", System.getProperty("user.name"));
+        reporter.loadXMLConfig("src/test/java/webApp/utilities/extentReport/extenc-config.xml");
+
+        extentReport.attachReporter(reporter);
+    }
+
+
+    @AfterSuite
     public static void reportTearDown() {
         extentReport.flush();
     }
@@ -82,18 +102,6 @@ public class ExtentReport {
         String fileName = featureFilePath.getFileName().toString();
         String[] parts = fileName.split("\\.feature");
         return parts[0];
-    }
-
-    @BeforeTest
-    public void startReport() throws IOException {
-        initializeReportConfiguration("shop");
-    }
-
-    public void initializeReportConfiguration(String reportName) throws IOException {
-        reporter = new ExtentSparkReporter("./reports/" + reportName);
-        extentReport.attachReporter(reporter);
-        extentReport.setSystemInfo("User Name", System.getProperty("user.name"));
-        reporter.loadXMLConfig("src/test/java/webApp/utilities/extentReport/extenc-config.xml");
     }
 }
 

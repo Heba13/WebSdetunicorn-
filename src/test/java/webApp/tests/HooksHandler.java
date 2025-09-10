@@ -23,6 +23,8 @@ public class HooksHandler  extends BaseTest{
         webDriverConfig = new WebDriverConfig();
         webDriverConfig.navigateTo("https://practice-react.sdetunicorns.com/");
     }
+
+
     @Before(order= 1)
     public void startTC(Scenario scenario) throws NoSuchFieldException, IllegalAccessException {
         ExtentReport.setScenario(scenario);
