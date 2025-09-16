@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ExtentReport {
-    private static ExtentReports extentReport ;
+    private static ExtentReports extentReport = new ExtentReports();
     public static ExtentSparkReporter reporter;
     static int currentStepDefIndex;
     private static ExtentTest test;
